@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, #000 0%, #111 100%);
+    font-family: 'Orbitron', sans-serif;
+    color: #0ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .hud {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    text-shadow: 0 0 10px #0ff;
+  }
+  
+  #score {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  
+  #restart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: #0ff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #0ff;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.3s;
+  }
+  
+  #restart:hover {
+    background: #fff;
+    color: #0ff;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .card {
+    background: #222;
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: transparent;
+  }
+  
+  .card.revealed {
+    background: #0ff;
+    color: #000;
+    transform: scale(1.05);
+  }
+
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #0ff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 10px #0ff;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+  
+  .back-button:hover {
+    background: #fff;
+    color: #0ff;
+    box-shadow: 0 0 20px #0ff;
+  }
+  

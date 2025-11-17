@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: #0ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: radial-gradient(circle at center, #000 0%, #111 100%);
+  transition: background 0.5s ease;
+}
+
+.container {
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px #0ff;
+  color: #00faff;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ccc;
+  text-shadow: 0 0 5px #0ff;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 0 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.menu a {
+  background: #111;
+  color: #0ff;
+  text-decoration: none;
+  padding: 30px 10px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  box-shadow: 0 0 15px #0ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #0ff;
+}
+
+.menu a:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 25px #00faff;
+  background: #0ff;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .menu a {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+}
